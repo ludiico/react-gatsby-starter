@@ -10,9 +10,9 @@ export default function Save(props: RouteComponentProps) {
   return (
     <Layout>
       <SEO title="Create Watchlist" />
-      <AuthGate>
-        <WatchlistSave {...props} />
-      </AuthGate>
+      {/* <AuthGate> */}
+      <WatchlistSave {...props} />
+      {/* </AuthGate> */}
     </Layout>
   );
 }
