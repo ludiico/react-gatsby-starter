@@ -7,7 +7,7 @@ export default function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-      <MoviesExplorer enableSearch />
+      <MoviesExplorer enableSearch={false} />
     </Layout>
   );
 }

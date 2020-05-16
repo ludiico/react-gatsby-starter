@@ -18,8 +18,19 @@ const httpLink = new HttpLink({
   fetch,
 });
 
+async function getToken() {
+  try {
+    if (!firebase) return '';
+    const token = await firebase.auth()?.currentUser?.getIdToken();
+    return token;
+  } catch (error) {
+    console.error(error);
+    return '';
+  }
+}
+
 const authLink = setContext(async (_, {headers}) => {
-  const token = await firebase.auth()?.currentUser?.getIdToken();
+  const token = await getToken();
   return {
     headers: {
       ...(headers || {
