@@ -1,0 +1,1 @@
+/// <reference path="../node_modules/firebase/index.d.ts" />

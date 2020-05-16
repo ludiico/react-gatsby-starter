@@ -9,8 +9,7 @@ import {
 import {onError} from 'apollo-link-error';
 import {setContext} from 'apollo-link-context';
 import fetch from 'isomorphic-fetch';
-
-export const isBrowser = () => typeof window !== 'undefined';
+import {firebase} from './firebase';
 
 const cache = new InMemoryCache();
 
@@ -20,10 +19,12 @@ const httpLink = new HttpLink({
 });
 
 const authLink = setContext(async (_, {headers}) => {
-  // Get headers
+  const token = await firebase.auth()?.currentUser?.getIdToken();
   return {
     headers: {
-      ...(headers || {}),
+      ...(headers || {
+        ...(token && {authorization: `Bearer ${token}`}),
+      }),
     },
   };
 });

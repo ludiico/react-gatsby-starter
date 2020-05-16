@@ -54,7 +54,7 @@ export default function (props: RouteComponentProps) {
 
   return (
     <Layout>
-      <div className="flex relative md:w-1/2 min-h-full self-center flex-col flex-grow">
+      <div className="flex relative md:w-3/4 lg:w-1/2 min-h-full self-center flex-col flex-grow">
         <span className="text-4xl font-sans py-4 ">
           {data.playlist_by_pk.title}
         </span>

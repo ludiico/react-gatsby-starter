@@ -104,7 +104,7 @@ export default function WatchlistSave(props: RouteComponentProps) {
 
   return (
     <>
-      <div className="flex relative md:w-1/2 min-h-full self-center flex-col flex-grow">
+      <div className="flex relative md:w-3/4 lg:w-1/2 min-h-full self-center flex-col flex-grow">
         <input
           autoFocus
           value={form.title}
