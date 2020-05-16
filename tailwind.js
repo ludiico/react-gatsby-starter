@@ -1,5 +1,12 @@
 module.exports = {
-  purge: [],
+  purge: [
+    './src/**/*.html',
+    './src/**/*.tsx',
+    './src/**/*.jsx',
+    './src/**/*.js',
+    './gatsby-browser.js',
+  ],
+
   target: 'relaxed',
   prefix: '',
   important: false,

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Ludiico - MovieShare`,
+    description: `Crie watchlists dos seus filmes preferidos e compartilhe com a galera! Invente sessões da tarde repletas de aventura, sem pagar nada por isso!`,
+    author: `@schettino`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
